@@ -1,0 +1,14 @@
+---
+# defaults file for rabbitmq
+rabbitmq_daemon: rabbitmq-server
+rabbitmq_state: started
+rabbitmq_enabled: true
+rabbitmq_version: "3.7.12"
+rabbitmq_package: rabbitmq-server
+rabbitmq_deb: "rabbitmq-server_{{ rabbitmq_version }}-1_all.deb"
+rabbitmq_deb_url: "https://packagecloud.io/rabbitmq/rabbitmq-server/packages/{{ ansible_distribution | lower }}/{{ ansible_distribution_release }}/{{ rabbitmq_deb }}/download"
+erlang_deb_url: http://packages.erlang-solutions.com/site/esl/esl-erlang/FLAVOUR_1_general/esl-erlang_21.2.6-1~ubuntu~bionic_amd64.deb
+erlang_deb_file: esl-erlang_21.2.6-1~ubuntu~bionic_amd64.deb
+erlang_rpm_url: http://packages.erlang-solutions.com/erlang-solutions-1.0-1.noarch.rpm
+erlang_rpm_file: erlang-solutions-1.0-1.noarch.rpm
+erlang_package: erlang,socat
